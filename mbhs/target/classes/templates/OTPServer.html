@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="viewport" content="width-device-width, initial-scale-1.0" />
+    <title>TouristNest</title>
+    <link rel="stylesheet" th:href="@{/css/SignIn.css}" />
+    <script src="https://kit.fontawesome.com/e06ed31c2b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="header">
+    <h2 class="logo">MBHS TV</h2>
+    <nav>
+        <ul class="nav-links-one">
+            <li><a href="">Home</a></li>
+            <li><a href="#">Following</a></li>
+            <li><a href="#">Browse</a></li>
+            <form action="search_results.html" method="get">
+                <input type="text" placeholder="Search">
+                <input class="btn1" type="submit" value="Search" id="submitButton">
+            </form>
+        </ul>
+        <ul class="nav-links-two">
+            <li><a href="#">Notifications</a></li>
+            <li><a href="#">Get Ad-Free</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="otp-box">
+    <h2 class="signin-title">OTP Verification</h2>
+    <p class="text">Please don't share your OTP with others!</p>
+    <form action="otpvarification" method = "GET">
+        <div class="text-field">
+            <input type="text" required placeholder="Enter OTP Here" name="otp" id="otp" >
+            <span></span>
+        </div>
+        <div class="button">
+            <input class="btn" type="submit" value="Submit" id="submitButton">
+        </div>
+    </form>
+    <div class="success-message" th:if="${successMessage}" id="successMessage">
+        <p th:text="${successMessage}"></p>
+    </div>
+    
+    <h2 class="signin-title"></h2>
+</div>
+
+<script>
+  
+    //can not go back from signin page after the submission
+    history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function () {
+    history.pushState(null, null, document.URL);
+  });
+</script>
+
+</body>
+</html>

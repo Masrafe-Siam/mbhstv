@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="viewport" content="width-device-width, initial-scale-1.0" />
+    <title>MBHS.TV</title>
+    <link rel="stylesheet" th:href="@{/css/video.css}" />
+</head>
+
+<body>
+<div class="header">
+    <h2 class="logo">MBHS TV</h2>
+    <nav>
+        <ul class="nav-links-one">
+            <li><a href="http://localhost:8080/homepage">Home</a></li>
+            <li><a href="#">Following</a></li>
+            <li><a href="http://localhost:8080/browse">Browse</a></li>
+            <form action="search_results.html" method="get">
+                <input type="text" placeholder="Search">
+                <input class="btn1" type="submit" value="Search" id="submitButton">
+            </form>
+        </ul>
+        <ul class="nav-links-two">
+            <li><a href="#">Notifications</a></li>
+            <li><a href="#">Get Ad-Free</a></li>
+            <a href="http://localhost:8080/signin" class="reg-button">Sign in</a>
+        </ul>
+    </nav>
+<div>
+<video class="pos" autoplay controls muted poster="/image/reyna.jpg" >
+    <source src="video/yo.mp4">
+</video>
+<ul class="nav-links-three">
+    <p class="video-title">Valorant Trailer</p>
+    <p class="video-author">SoulReaperMS</p>
+    <li><a href="#" class="comment">Subscribe</a></li>
+    <li><a href="#" class="comment">Like</a></li>
+    <li><a href="#" class="comment">Comment</a></li>
+</ul>
+<p class="video-view">10M views &#183 2 month ago</p>
+</div>
+</body>
+</html>
